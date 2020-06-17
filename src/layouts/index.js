@@ -121,6 +121,10 @@ src: local('Mughal'),
     align-items: center;
     align-content: center; */}
   }
+
+  @keyframes blinker {
+  50% { opacity: 0; }
+}
 `
 
 // import Global from './../components/Global'
@@ -239,6 +243,13 @@ const NavMenu = styled(UL)`
   a:hover {
     /* color: ${props => props.theme.white}; */
   }
+  .blink {
+    &:hover {
+        animation: blinker 1s linear infinite;
+    }
+  }
+
+
 `
 
 const NavItem = styled(LI)`
@@ -377,12 +388,12 @@ export default class Template extends React.Component {
                 </Link>
 
                 <Link to='/404/'>
-                  <NavItem>
+                  <NavItem className='blink'>
                     <SmallFolderComp projectTitle='' info='' projectLink='/404/' src={ay1} src2x='' />
-                    Click for free work
+                    Click here for free work
                   </NavItem>
                 </Link>
-                
+
               </NavMenu>
 
             </PaddingMobile>
