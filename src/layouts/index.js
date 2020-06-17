@@ -181,6 +181,7 @@ const Logo = styled.img`
   object-fit: contain;
   margin: 0;
   max-width: 136px;
+  display: inherit;
   &:hover {
     cursor: alias;
   }
@@ -190,6 +191,18 @@ const Logo = styled.img`
     margin: 0 auto; */
   }
 `
+
+const LogoContainer = styled.div`
+  width: 12%;
+  display: flex;
+  align-items: center;
+  @media (max-width: 693px) {
+    /* padding-top: 0;
+    width: 50%;
+    margin: 0 auto; */
+  }
+`
+
 
 const PaddingMobile = styled.div`
   height: 100%;
@@ -268,6 +281,77 @@ const NavItem = styled(LI)`
     100% { background-position: 0% 50% }
   }
 `
+
+export default class Template extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      isDark: true,
+      theme: nightMode,
+      shouldHide: false
+    }
+    this.handlePopUp = this.handlePopUp.bind(this)
+  }
+  static propTypes = {
+   children: PropTypes.func,
+ }
+
+  handlePopUp () {
+    this.setState(prevState => ({
+      shouldHide: !prevState.shouldHide
+    }))
+  }
+  HandleColorChange () {
+    // Toggle day / night on click
+    const isDark = !this.state.isDark
+
+    this.setState({
+      isDark: isDark,
+      theme: isDark ? nightMode : lightMode
+    })
+  }
+  render () {
+    // uncomment at end
+    //document.addEventListener('contextmenu', event => event.preventDefault());
+    // const { children, location } = this.props
+    return (
+      <div>
+      {/* <a onClick={this.onClick}>CLick</a> */}
+      <ThemeProvider className='Theme' theme={this.state.theme}>
+        <WrapLayout className='Nav-PageRender-Flex-Container Also-Wrap'>
+    			<Helmet
+    	      title='jimmyNames'
+    	      meta={[
+    	        { name: 'description', content: 'Jimmy Names' },
+    	        { name: 'keywords', content: 'jimmy names, jimmyNames' },
+    	      ]}
+    	    />
+        	{/* <Nav /> */}
+          <NavComp className='Nav'>
+            <PaddingMobile>
+            <LogoContainer>
+              <Link to='/' exact><Logo src={logo2} /></Link>
+              </LogoContainer>
+
+              <NavMenu className='Menu'>
+                <Link to='/about/'><NavItem>About.i</NavItem></Link>
+                <Link to='/me/'><NavItem>Me.href</NavItem></Link>
+                <Link to='/404/'><NavItem>404</NavItem></Link>
+              </NavMenu>
+
+            </PaddingMobile>
+          </NavComp>
+    		    			<PageRender id='page-wrap' className='PageRender'>
+    		      			 {this.props.children()}
+    		    			</PageRender>
+      	</WrapLayout>
+      </ThemeProvider>
+      </div>
+    )
+  }
+}
+
+
 
 const Emoji = styled.div`
 
@@ -374,70 +458,3 @@ const DownloadPopup = styled.div`
   transform: ${props => props.visible ? null : 'scale(0, 0) rotate(180deg)'};
   transform-origin: top right;
 `
-
-export default class Template extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      isDark: true,
-      theme: nightMode,
-      shouldHide: false
-    }
-    this.handlePopUp = this.handlePopUp.bind(this)
-  }
-  static propTypes = {
-   children: PropTypes.func,
- }
-
-  handlePopUp () {
-    this.setState(prevState => ({
-      shouldHide: !prevState.shouldHide
-    }))
-  }
-  HandleColorChange () {
-    // Toggle day / night on click
-    const isDark = !this.state.isDark
-
-    this.setState({
-      isDark: isDark,
-      theme: isDark ? nightMode : lightMode
-    })
-  }
-  render () {
-    // uncomment at end
-    //document.addEventListener('contextmenu', event => event.preventDefault());
-    // const { children, location } = this.props
-    return (
-      <div>
-      {/* <a onClick={this.onClick}>CLick</a> */}
-      <ThemeProvider className='Theme' theme={this.state.theme}>
-        <WrapLayout className='Nav-PageRender-Flex-Container Also-Wrap'>
-    			<Helmet
-    	      title='jimmyNames'
-    	      meta={[
-    	        { name: 'description', content: 'Jimmy Names' },
-    	        { name: 'keywords', content: 'jimmy names, jimmyNames' },
-    	      ]}
-    	    />
-        	{/* <Nav /> */}
-          <NavComp className='Nav'>
-            <PaddingMobile>
-              <Link to='/' exact><Logo src={logo2} /></Link>
-
-              <NavMenu className='Menu'>
-                <Link to='/about/'><NavItem>About.i</NavItem></Link>
-                <Link to='/me/'><NavItem>Me.href</NavItem></Link>
-                <Link to='/404/'><NavItem>404</NavItem></Link>
-              </NavMenu>
-
-            </PaddingMobile>
-          </NavComp>
-    		    			<PageRender id='page-wrap' className='PageRender'>
-    		      			 {this.props.children()}
-    		    			</PageRender>
-      	</WrapLayout>
-      </ThemeProvider>
-      </div>
-    )
-  }
-}

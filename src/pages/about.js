@@ -31,6 +31,9 @@ const AboutContainer = styled.div`
   height: 100%;
   width: 60%;
   flex: 1;
+  * {
+    user-select: none;
+  }
 `
 
 const H3about = styled(H3)`
@@ -47,6 +50,13 @@ const H2about = styled(H2)`
   i {
     padding-right: 5px;
     color: ${props => props.theme.white};
+    font-size: 26px;
+    transition: all .666s ease;
+    &:hover {
+      background: -webkit-linear-gradient(#eee, #333);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+    }
   }
 `
 
@@ -113,7 +123,7 @@ export default class Index extends React.Component {
               <ThreeD />
         <AboutContainer>
           <H1about>hello_world</H1about>
-          <H2about>iCreate under the alias of 👽<i>Names</i>👔</H2about>
+          <H2about>iCreate under the alias of 👽<i className='large'>names</i>👔</H2about>
           <VerticalCenterAlign about><H3about about>I'm a Front-end Web Developer & Designer</H3about></VerticalCenterAlign>
           <H4about>I fuck with Css-in-js/Sass/Vanilla Css™, React.js⚛️ & SVGs💖</H4about>
           <CubeComp />
