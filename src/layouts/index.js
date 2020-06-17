@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 // import Nav from './../components/Nav'
 import DownloadComp from './../components/Download'
+import SmallFolderComp from './../components/SmallFolder'
 
 import logo from './../gif/jn.gif'
 import logo2 from './../images/logo.svg'
 import Link from 'gatsby-link'
-
+import ay1 from './../images/projects/auralyouth/ay1.png'
 import {UL} from './../components/HTML/UL'
 import {LI} from './../components/HTML/LI'
 
@@ -181,7 +182,7 @@ const Logo = styled.img`
   object-fit: contain;
   margin: 0;
   max-width: 136px;
-  display: inherit;
+  display: inherit !@important;
   &:hover {
     cursor: alias;
   }
@@ -196,6 +197,9 @@ const LogoContainer = styled.div`
   width: 12%;
   display: flex;
   align-items: center;
+  a{
+    display: inherit !@important;
+  }
   @media (max-width: 693px) {
     /* padding-top: 0;
     width: 50%;
@@ -242,6 +246,8 @@ const NavItem = styled(LI)`
     list-style: none;
     margin-left: 1.6rem;
     user-select: none;
+    display: flex;
+    align-items: center;
   a {
     text-decoration: none;
     color: ${props => props.theme.white} !important;
@@ -262,6 +268,28 @@ const NavItem = styled(LI)`
      visibility: visible;
     }
   }
+
+  &:hover {
+    .folder-holder {
+      img {
+          top: 2px;
+          &:nth-child(2) {
+            // border: 1px solid blue;
+          }
+        }
+
+       p {
+         color: ${props => props.theme.blue};
+       }
+
+       div {
+         top: 26px !important;
+         top: 5px !important;
+         transform: rotateX( -25deg);
+         // box-shadow: 0 7px 5px -2px blue;
+       }
+     }
+    }
 
   @-webkit-keyframes Gradient {
     0% {background-position: 0% 50%}
@@ -334,9 +362,27 @@ export default class Template extends React.Component {
               </LogoContainer>
 
               <NavMenu className='Menu'>
-                <Link to='/about/'><NavItem>About.i</NavItem></Link>
-                <Link to='/me/'><NavItem>Me.href</NavItem></Link>
-                <Link to='/404/'><NavItem>404</NavItem></Link>
+                <Link to='/about/'>
+                  <NavItem>
+                    <SmallFolderComp projectTitle='' info='' projectLink='/about/' src={ay1} src2x='' />
+                    About.i
+                  </NavItem>
+                </Link>
+
+                <Link to='/me/'>
+                  <NavItem>
+                    <SmallFolderComp projectTitle='' info='' projectLink='/about/' src={ay1} src2x='' />
+                    Me.href
+                  </NavItem>
+                </Link>
+
+                <Link to='/404/'>
+                  <NavItem>
+                    <SmallFolderComp projectTitle='' info='' projectLink='/404/' src={ay1} src2x='' />
+                    Click for free work
+                  </NavItem>
+                </Link>
+                
               </NavMenu>
 
             </PaddingMobile>
