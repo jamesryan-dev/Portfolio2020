@@ -184,6 +184,10 @@ const NavComp = styled.section`
       width: 100%;
       padding: 0.75em;
       padding-top: 1em;
+      height: auto;
+     transform: none;
+     left: 0;
+     text-align: center;
   }
 
   a {
@@ -217,11 +221,33 @@ const LogoContainer = styled.div`
   a{
     display: inherit !important;
   }
-  @media (max-width: 693px) {
-    /* padding-top: 0;
-    width: 50%;
-    margin: 0 auto; */
+  @media only screen and (max-width: 898px) {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  a {
+    display: flex !important;
+    justify-content: center;
+    img {
+      height: 100%;
+      object-fit: contain;
+      margin: 0;
+      max-width: 236px;
+      display: inherit !important;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      pointer-events: none;
+      align-content: center;
+      align-self: center;
+    }
   }
+}
+
 `
 
 
@@ -231,7 +257,12 @@ const PaddingMobile = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  @media only screen and (max-width: 898px) {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
 @media (max-width: 414px) {
   box-sizing: border-box;
 }
@@ -253,6 +284,7 @@ const NavMenu = styled(UL)`
     text-decoration: none;
   }
 
+
   a:hover {
     /* color: ${props => props.theme.white}; */
   }
@@ -264,6 +296,8 @@ const NavMenu = styled(UL)`
 
   @media only screen and (max-width: 898px) {
     width: 50%;
+    width: 100%;
+   justify-content: space-evenly;
     a:last-child {
       display: none;
     }
@@ -282,6 +316,9 @@ const NavItem = styled(LI)`
   a {
     text-decoration: none;
     color: ${props => props.theme.white} !important;
+  }
+  @media (max-width: 898px) {
+    margin-left: 0;
   }
   @media (max-width: 693px) {}
 
