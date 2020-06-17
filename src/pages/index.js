@@ -16,6 +16,8 @@ import yang from './../gif/yang.gif'
 import para from './../gif/para.gif'
 import skel from './../gif/skel.gif'
 
+import ChessBoard2 from './../components/ChessBoard2'
+
 const Page = styled.div`
   width: 100%;
   height: 100%;
@@ -56,6 +58,7 @@ export default class Index extends React.Component {
           <DraggableComp src={ying} zIndex='2' />
           <DraggableComp src={yang} zIndex='2' />
         </DraggableContainer>
+        
       </Page>
     )
   }
