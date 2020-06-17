@@ -1,0 +1,321 @@
+.js_chess {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+@media all and (max-width: 959px) {
+    .js_chess {
+    flex-direction: column;
+  }
+}
+.column {
+  display: flex;
+  padding: 10px;
+}
+
+.column_left {
+  flex: 2;
+}
+.column_right {
+  flex: 1;
+}
+.menu {
+  margin: 0 auto;
+  width: 90%;
+}
+.board {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  border: 10px solid #999999;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 700px;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+@media all and (max-height: 768px) {
+  .board {
+    max-width: 520px;
+  }
+}
+.board.finished {
+  opacity: .25;
+  pointer-events: none;
+}
+.board .field {
+  display: block;
+  padding-top: 100%;
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+.board .field:hover {
+  -webkit-box-shadow:inset 0px 0px 0px 3px #3366CC;
+  -moz-box-shadow:inset 0px 0px 0px 3px #3366CC;
+  box-shadow:inset 0px 0px 0px 3px #3366CC;
+}
+.board .lastMove {
+  -webkit-box-shadow:inset 0px 0px 0px 2px #FF0033;
+  -moz-box-shadow:inset 0px 0px 0px 2px #FF0033;
+  box-shadow:inset 0px 0px 0px 2px #FF0033;
+}
+.board .moveFrom {
+  -webkit-box-shadow:inset 0px 0px 0px 3px #3366CC;
+  -moz-box-shadow:inset 0px 0px 0px 3px #3366CC;
+  box-shadow:inset 0px 0px 0px 3px #3366CC;
+}
+.board .moveTo {
+  -webkit-box-shadow:inset 0px 0px 0px 2px #33CC33;
+  -moz-box-shadow:inset 0px 0px 0px 2px #33CC33;
+  box-shadow:inset 0px 0px 0px 2px #33CC33;
+}
+.board .pieceP {
+  background-image: url(./img/pawn_white.png);
+}
+.board .pieceK {
+  background-image: url(./img/king_white.png);
+}
+.board .pieceQ {
+  background-image: url(./img/queen_white.png);
+}
+.board .pieceR {
+  background-image: url(./img/rook_white.png);
+}
+.board .pieceB {
+  background-image: url(./img/bishop_white.png);
+}
+.board .pieceN {
+  background-image: url(./img/knight_white.png);
+}
+.board .piecep {
+  background-image: url(./img/pawn_black.png);
+}
+.board .piecek {
+  background-image: url(./img/king_black.png);
+}
+.board .pieceq {
+  background-image: url(./img/queen_black.png);
+}
+.board .piecer {
+  background-image: url(./img/rook_black.png);
+}
+.board .pieceb {
+  background-image: url(./img/bishop_black.png);
+}
+.board .piecen {
+  background-image: url(./img/knight_black.png);
+}
+.overlay {
+  background-image: url(./img/game_over.jpg);
+  background-size: 40% 20%;
+  background-repeat:no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #212121;
+  font-size: 20px;
+  color: #cccccc;
+}
+a:visited{
+  color: #4CAF50;;
+}
+a:link{
+  color: #4CAF50;;
+}
+
+body .field {
+  background-color: #cccccc;
+}
+body .field:nth-of-type(-2n+8), body .field:nth-of-type(8) ~ *:nth-of-type(-2n+15), body .field:nth-of-type(16) ~ *:nth-of-type(-2n+24), body .field:nth-of-type(24) ~ *:nth-of-type(-2n+31), body .field:nth-of-type(32) ~ *:nth-of-type(-2n+40), body .field:nth-of-type(40) ~ *:nth-of-type(-2n+47), body .field:nth-of-type(48) ~ *:nth-of-type(-2n+56), body .field:nth-of-type(56) ~ *:nth-of-type(-2n+63) {
+  background-color: #666666;
+}
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: #006400;
+}
+button:disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+.menu #history {
+  background-color: #f0f7fb;
+  line-height: 18px;
+  overflow: hidden;
+  margin: 10px 0px 10px 0px;
+  text-align: center;
+  padding: 5px;
+  color: #666666;
+  border-radius: 10px;
+  overflow-y: scroll;
+  height: 105px;
+  font-size: 18px;
+}
+.menu #copyright {
+  margin-top: 50px;
+  text-align: center;
+}
+.menu #confirmation {
+  margin-top: 35px;
+}
+.menu #level {
+  margin-top: 35px;
+}
+/* Customize the label (the level_wrapper) */
+.level_wrapper {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.level_wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.level_wrapper:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.level_wrapper input:checked ~ .checkmark {
+  background-color: #4CAF50;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.level_wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.level_wrapper .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #4CAF50;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.loading {
+  cursor: wait;
+}

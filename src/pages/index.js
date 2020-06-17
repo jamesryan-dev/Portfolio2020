@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import Chess from './../components/Chess'
 import SlideshowComp from './../components/Slider'
 import DraggableComp from './../components/Draggable'
 import chains from './../gif/chains.gif'
@@ -56,6 +56,7 @@ export default class Index extends React.Component {
           <DraggableComp src={ying} zIndex='2' />
           <DraggableComp src={yang} zIndex='2' />
         </DraggableContainer>
+        <Chess />
       </Page>
     )
   }
