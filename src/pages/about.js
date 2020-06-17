@@ -62,6 +62,10 @@ const AboutContainer = styled.div`
       padding-left: 1px;
       padding-right: 2px;
     }
+
+    @media only screen and (max-width: 898px) {
+      padding-top: 0;
+    }
   }
 `
 

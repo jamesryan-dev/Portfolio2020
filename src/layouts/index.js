@@ -52,6 +52,9 @@ const WrapLayout = styled.div`
 
   @media only screen and (max-width: 898px) {
     height: 95vh;
+    height: 87vh;
+display: flex;
+justify-content: space-between;
   }
 `
 
