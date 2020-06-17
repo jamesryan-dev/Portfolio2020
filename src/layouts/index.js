@@ -95,6 +95,13 @@ font-style: normal;
 src: local('Mughal'),
       url('../static/fonts/Mughal.otf')
 }
+
+@font-face {
+font-family: 'Arch';
+font-style: normal;
+src: local('Russell-Square-Regular'),
+      url('../static/fonts/Russell Square Regular.ttf')
+}
   html {
     background: black;
   }
@@ -186,7 +193,7 @@ const Logo = styled.img`
   object-fit: contain;
   margin: 0;
   max-width: 136px;
-  display: inherit !@important;
+  display: inherit !important;
   &:hover {
     cursor: alias;
   }
@@ -202,7 +209,7 @@ const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   a{
-    display: inherit !@important;
+    display: inherit !important;
   }
   @media (max-width: 693px) {
     /* padding-top: 0;

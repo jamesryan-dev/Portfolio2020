@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Jimmy Names Codes`
+    title: `names`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [ `Open Sans Condensed` ]
+        fonts: [ `Inconsolata` ]
       }
     },
     {

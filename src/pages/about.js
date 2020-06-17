@@ -34,19 +34,17 @@ const AboutContainer = styled.div`
   * {
     user-select: none;
   }
+
+  h1, h3, p, div, h4, h2, li, ul {
+      font-family: 'Inconsolata', monospace;
+
+  }
 `
 
 const H3about = styled(H3)`
   margin: 0;
   margin-right: ${props => props.about ? '0.3em' : null};
-`
-
-const H1about = styled(H1)`
-  margin-top: 0;
-  font-size: 40px;
-`
-
-const H2about = styled(H2)`
+  margin-bottom: 1em;
   i {
     padding-right: 5px;
     color: ${props => props.theme.white};
@@ -57,6 +55,15 @@ const H2about = styled(H2)`
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
     }
+`
+
+const H1about = styled(H1)`
+  margin-top: 0;
+  font-size: 40px;
+`
+
+const H2about = styled(H2)`
+
   }
 `
 
@@ -72,9 +79,12 @@ const VerticalCenterAlign = styled.div`
   align-items: center;
   align-content: center;
   flex-direction: row;
-  -webkit-margin-before: 0.83em;
-  -webkit-margin-after: 0.83em;
+  margin-bottom: 1em;
+  margin-top: 0;
   position: relative;
+  h3 {
+    margin-bottom: 0;
+  }
   a {
     display: flex;
     align-items: center;
@@ -123,9 +133,9 @@ export default class Index extends React.Component {
               <ThreeD />
         <AboutContainer>
           <H1about>hello_world</H1about>
-          <H2about>iCreate under the alias of 👽<i className='large'>names</i>👔</H2about>
+          <H3about>I create under the alias of 👽<i className='large'>names</i>👔</H3about>
           <VerticalCenterAlign about><H3about about>I'm a Front-end Web Developer & Designer</H3about></VerticalCenterAlign>
-          <H4about>I fuck with Css-in-js/Sass/Vanilla Css™, React.js⚛️ & SVGs💖</H4about>
+          <H3about>I fuck with Css™, React.js⚛️ & SVGs💖</H3about>
           <CubeComp />
         </AboutContainer>
         <Canvas id="canvas"></Canvas>

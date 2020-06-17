@@ -53,16 +53,8 @@ export default class Index extends React.Component {
         <DraggableContainer>
           <DraggableComp src={chains} zIndex='3' />
           <DraggableComp src={chess} zIndex='1' />
-          <DraggableComp src={dove} zIndex='2' />
-          <DraggableComp src={gang} zIndex='2' />
-          <DraggableComp src={ice} zIndex='2' />
-          <DraggableComp src={newgif} zIndex='4' />
-          <DraggableComp src={omni} zIndex='2' />
           <DraggableComp src={ying} zIndex='2' />
           <DraggableComp src={yang} zIndex='2' />
-          <DraggableComp src={para} zIndex='1' />
-          <DraggableComp src={skel} zIndex='-10' />
-          <DraggableComp src={heart} zIndex='-10' />
         </DraggableContainer>
       </Page>
     )

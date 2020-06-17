@@ -14,12 +14,24 @@ const Four = styled.div`
   align-items: center;
   align-content: center;
   background: black;
+  @supports (-webkit-text-stroke: 1px black) {
+  h1 {
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: black;
+  }
+}
 `
 
 const Oh = styled.h1`
   font-size: 166.6px;
   color: white;
   font-family: sans-serif;
+  transition: all 0.666s ease-in;
+  transition-delay: 0.15s;
+  &:hover {
+    -webkit-text-fill-color: white;
+    transition-delay: 0.2s;
+  }
 `
 
 const John = styled.img`
@@ -33,7 +45,9 @@ export default class FourOhFour extends React.Component {
     return (
       <Four>
         <Wrap>
-          <Oh>404</Oh>
+          <Oh>4</Oh>
+          <Oh>0</Oh>
+          <Oh>4</Oh>
           <John src={notfoundgif} alt='OhNo' />
         </Wrap>
       </Four>
