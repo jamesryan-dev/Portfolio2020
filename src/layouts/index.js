@@ -49,6 +49,10 @@ const WrapLayout = styled.div`
   @media (min-width: ) {
     min-width: 1200px;
   }
+
+  @media only screen and (max-width: 898px) {
+    height: 95vh;
+  }
 `
 
 const TransitionContainer = styled.div`
@@ -170,16 +174,16 @@ const NavComp = styled.section`
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 0;
-  background: red !@important;
+
 
   /* background: ${props => props.theme.black}; */
   overflow: hidden;
-  @media (max-width: 693px) {
-    width: 100%;
-    padding: 0.75em;
-    position: relative;
-  }
-  @media (max-width: 414px) {
+
+  @media only screen and (max-width: 898px) {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0.75em;
+      padding-top: 1em;
   }
 
   a {
@@ -255,6 +259,13 @@ const NavMenu = styled(UL)`
   .blink {
     &:hover {
         animation: blinker 1s linear infinite;
+    }
+  }
+
+  @media only screen and (max-width: 898px) {
+    width: 50%;
+    a:last-child {
+      display: none;
     }
   }
 

@@ -15,17 +15,36 @@ const Page = styled.div`
   box-sizing: border-box;
   padding-top: 0.75rem;
   padding-left: 0.75rem;
+  padding-right: 0.75rem;
   * {
     font-family: 'Inconsolata', monospace;
     user-select: none;
   }
+
+  @media only screen and (max-width: 898px) {
+    width: 100%;
+
+    h1 {
+      font-size: 26px;
+    }
+
+    h3, li{
+      font-size: 16px;
+    }
+  }
 `
 
 const Intro = styled.div`
+
+box-sizing: border-box;
+position: relative;
+height: 100%;
+padding-bottom: 5px;
   width: 100%;
   padding-top: 150px;
-  @media (max-width: 693px) {
+  @media (max-width: 898px) {
     width: 100%;
+    padding-top: 0px;
   }
 `
 

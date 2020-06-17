@@ -23,6 +23,10 @@ const Page = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @media only screen and (max-width: 898px) {
+    flex-direction: column;
+  }
 `
 
 const AboutContainer = styled.div`
@@ -39,6 +43,25 @@ const AboutContainer = styled.div`
   h1, h3, p, div, h4, h2, li, ul {
       font-family: 'Inconsolata', monospace;
 
+  }
+
+  @media only screen and (max-width: 898px) {
+    width: 100%;
+    margin-top: 100px;
+
+    h1 {
+      font-size: 26px;
+    }
+
+    h3, li{
+      font-size: 16px;
+    }
+
+    i {
+      font-size: 17px !important;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 `
 
@@ -125,6 +148,11 @@ const RuinLogo = styled.img`
 const Canvas = styled.div`
 height: 100% !important;
 width: 50% !important;
+
+@media only screen and (max-width: 898px) {
+  width: 50% !important;
+  margin-top: 10px;
+}
 `
 
 export default class Index extends React.Component {

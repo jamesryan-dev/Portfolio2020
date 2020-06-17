@@ -38,16 +38,37 @@ const John = styled.img`
   position: absolute;
   bottom: 0;
   right: 5%;
+
+  @media only screen and (max-width: 898px) {
+    right: 0;
+    width: 80%;
+  }
 `
+
+const FourOhFour2 = styled.div`
+  @media only screen and (max-width: 898px) {
+    right: 0;
+    width: 100%;
+    h1 {
+      font-size: 136.666px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+`
+
+
 
 export default class FourOhFour extends React.Component {
   render () {
     return (
       <Four>
         <Wrap>
+        <FourOhFour2>
           <Oh>4</Oh>
           <Oh>0</Oh>
           <Oh>4</Oh>
+        </FourOhFour2>
           <John src={notfoundgif} alt='OhNo' />
         </Wrap>
       </Four>
