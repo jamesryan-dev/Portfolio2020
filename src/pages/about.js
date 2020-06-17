@@ -31,6 +31,7 @@ const AboutContainer = styled.div`
   height: 100%;
   width: 60%;
   flex: 1;
+  padding-bottom: 5px;
   * {
     user-select: none;
   }

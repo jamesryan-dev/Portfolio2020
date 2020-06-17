@@ -15,6 +15,10 @@ const Page = styled.div`
   box-sizing: border-box;
   padding-top: 0.75rem;
   padding-left: 0.75rem;
+  * {
+    font-family: 'Inconsolata', monospace;
+    user-select: none;
+  }
 `
 
 const Intro = styled.div`
@@ -27,6 +31,7 @@ const Intro = styled.div`
 
 const H1me = styled(H1)`
   margin-top: 0;
+  font-size: 40px;
 `
 
 const Pme = styled(P)`
@@ -54,10 +59,11 @@ const ContactUl = styled.ul`
 
 const ContactLi = styled.li`
   padding: 0.75rem;
+  padding-left: 0;
   text-decoration: none;
   margin: 0;
   box-sizing: border-box;
-  transition: background 1.666s ease;
+  transition: all 1.666s ease;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -86,6 +92,7 @@ const ContactLi = styled.li`
     }
   }
   &:hover {
+    padding-left: 0.75rem;
     background: ${props => props.theme.blue};
     background: ${props => props.gallery ? 'none' : null};
     a {
@@ -127,7 +134,6 @@ export default class Index extends React.Component {
       <Page>
         <Intro>
           <H1me>hyper_Links</H1me>
-          <Pme>A collection of links to stalk me further   👀</Pme>
           <Pme>Follow, Say <i>hey</i>     👋🏻</Pme>
           <Pme>Always down for making friends, collaborating, freelance and/or sharing music     ♻️</Pme>
         </Intro>

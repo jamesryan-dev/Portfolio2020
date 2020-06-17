@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
 
 import folder from './../../images/folder.png'
 import fireGif from './../../gif/fire.gif'
@@ -118,13 +117,11 @@ export default class SmallFolderComp extends React.Component {
   isLit = (fire) => {
     const folderHtml =
     <SmallFolderHolder theme={this.props.theme} className='folder-holder'>
-      <Link to={this.props.projectLink}>
         <SmallFolderImage class='folder-holder-img' src={folder} />
         <SmallProjectImage class='project-image' src={this.props.src} srcSet={this.props.src + ' 1x, ' + this.props.src2x + ' 2x'} />
         <SmallFolderClose class='folder-close'>
           <SmallFolderCloseP>{this.props.projectTitle}</SmallFolderCloseP>
         </SmallFolderClose>
-      </Link>
     </SmallFolderHolder>
     if (fire == true) {
       return (

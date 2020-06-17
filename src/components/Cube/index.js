@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import {HoverAdjustments} from './../HoverAdjustments'
-import {H4} from './../HTML/H4'
+import {H3} from './../HTML/H3'
 
 const CubeContainer = styled.div`
   display: flex;
@@ -10,9 +10,9 @@ const CubeContainer = styled.div`
   align-items: center;
   align-items: flex-start;
   justify-content: flex-start;
-  h4 {
+  h3 {
     margin: 0;
-    padding-top: 8px;
+    padding-top: 7px;
   }
 `
 
@@ -63,8 +63,8 @@ const CubeList = styled.ul`
 `
 
 const CubeListItem = styled.li`
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 18.72px;
+  line-height: 21.528px;
   padding: 0.3em 0;
   overflow: visible;
   width: 33vw;
@@ -77,7 +77,7 @@ export default class CubeComp extends React.Component {
   render () {
     return (
       <CubeContainer>
-        <H4>I also dig</H4>
+        <H3>I also dig</H3>
         <Cube >
           <CubeList>
             <CubeListItem>music</CubeListItem>

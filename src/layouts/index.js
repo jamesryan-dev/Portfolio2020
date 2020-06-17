@@ -194,6 +194,8 @@ const Logo = styled.img`
   margin: 0;
   max-width: 136px;
   display: inherit !important;
+  user-select: none;
+  pointer-events: none;
   &:hover {
     cursor: alias;
   }

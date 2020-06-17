@@ -15,7 +15,7 @@ const Slideshow = styled.div`
 const SlideshowContent = styled.p`
   height: 100%;
   width: 17666px;
-  animation: moveSlideshow 317.666s linear infinite;
+  animation: moveSlideshow 217.666s linear infinite;
   margin: 0;
   line-height: 50px;
   transition: all .4s ease-in;
