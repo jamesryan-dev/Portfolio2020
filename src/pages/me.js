@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import {H1} from './../components/HTML/H1'
 import {P} from './../components/HTML/P'
 
-import me from './../images/me.png'
-import plant from './../images/plantlife.png'
-import fish from './../images/fish.png'
+import music from './../images/icons/SVG/music.svg'
+import email from './../images/icons/SVG/email.svg'
+import twitter from './../images/icons/SVG/bat.svg'
+import ig from './../images/icons/SVG/ig.svg'
 
 const Page = styled.div`
   width: 100%;
@@ -61,6 +62,16 @@ const ContactLi = styled.li`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  img {
+    height: 100%;
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+  }
+  .soundcloud {
+    height: 33px;
+    width: 33px;
+  }
   a {
     text-decoration: none;
     ${'' /* color: ${props => props.theme.white}; */}
@@ -122,10 +133,10 @@ export default class Index extends React.Component {
         </Intro>
         <ContactContainer>
           <ContactUl>
-            <ContactLi><a href='mailto:freebobcole@gmail.com'><H1link>Email - freebobcole@gmail.com</H1link></a></ContactLi>
-            <ContactLi><a href='https://www.instagram.com/names.fm/' target='_blank' rel='noopener'><H1link>Instagram - @names.fm</H1link></a></ContactLi>
-            <ContactLi><a href='https://twitter.com/namescodes' target='_blank' rel='noopener'><H1link>Twitter - @names_fm</H1link></a></ContactLi>
-            <ContactLi><a href='https://soundcloud.com/namesnames' target='_blank' rel='noopener'><H1link>Soundcloud - /names-fm</H1link></a></ContactLi>
+            <ContactLi><a href='mailto:freebobcole@gmail.com'><H1link>Email - freebobcole@gmail.com</H1link></a><img src={email} /></ContactLi>
+            <ContactLi><a href='https://www.instagram.com/names.fm/' target='_blank' rel='noopener'><H1link>Instagram - @names.fm</H1link></a><img src={ig} /></ContactLi>
+            <ContactLi><a href='https://twitter.com/namescodes' target='_blank' rel='noopener'><H1link>Twitter - @names_fm</H1link></a><img src={twitter} /></ContactLi>
+            <ContactLi><a href='https://soundcloud.com/namesnames' target='_blank' rel='noopener'><H1link>Soundcloud - /names-fm</H1link></a><img className='soundcloud' src={music} /></ContactLi>
 
           </ContactUl>
         </ContactContainer>

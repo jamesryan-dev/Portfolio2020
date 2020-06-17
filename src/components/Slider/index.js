@@ -20,7 +20,7 @@ const SlideshowContent = styled.p`
   line-height: 50px;
   transition: all .4s ease-in;
   font-size: 46px;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Mughal', sans-serif;
   opacity: 0.2;
   color: white !important;
   transform: translate3d(0, 0, 0);

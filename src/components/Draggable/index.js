@@ -1,6 +1,6 @@
 import React from 'react'
 import Draggable from 'react-draggable'
-
+import styled from 'styled-components'
 // const DraggableContainer = styled.div`
 //   width: 100%;
 //   height: 100%;
@@ -14,6 +14,15 @@ import Draggable from 'react-draggable'
 //     user-select: none;
 //   }
 // `
+
+const Item = styled.div`
+a:hover ,
+&:hover {
+  cursor: crosshair;
+}
+
+`
+
 
 export default class DraggableComp extends React.Component {
   constructor () {
@@ -31,9 +40,9 @@ export default class DraggableComp extends React.Component {
   render () {
     return (
       <Draggable bounds='parent'>
-        <div style={{position: 'absolute', zIndex: this.props.zIndex, bottom: this.number, right: this.number2}}>
+        <Item style={{position: 'absolute', zIndex: this.props.zIndex, bottom: this.number, right: this.number2}}>
           <img src={this.props.src} draggable='false' />
-        </div>
+        </Item>
       </Draggable>
     )
   }

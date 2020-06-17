@@ -87,6 +87,16 @@ const PageRender = styled.div`
 `
 
 injectGlobal`
+
+@font-face {
+font-family: 'Mughal';
+font-style: normal;
+src: local('Mughal'),
+      url('../static/fonts/Mughal.otf')
+}
+  html {
+    background: black;
+  }
   body {
     font-family: sans-serif;
     background: black;
@@ -94,6 +104,7 @@ injectGlobal`
   }
   * {
     transition: all 0.5s ease-in-out;
+    cursor:crosshair;
   }
   h1, h2, h3, h4, h5, p, a, ul, li {
     font-family: sans-serif;
@@ -170,6 +181,9 @@ const Logo = styled.img`
   object-fit: contain;
   margin: 0;
   max-width: 136px;
+  &:hover {
+    cursor: alias;
+  }
   @media (max-width: 693px) {
     /* padding-top: 0;
     width: 50%;
@@ -390,6 +404,8 @@ export default class Template extends React.Component {
     })
   }
   render () {
+    // uncomment at end
+    //document.addEventListener('contextmenu', event => event.preventDefault());
     // const { children, location } = this.props
     return (
       <div>
