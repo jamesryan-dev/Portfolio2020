@@ -5,12 +5,14 @@ import RightColumn from './RightColumn.js'
 import {NEW_GAME_BOARD_CONFIG, ROWS, COLUMNS, COLORS, SETTINGS, PERSIST_STATE_NAMESPACE, MOVE_SOUND} from './const/board'
 import { get } from 'local-storage'
 import './App.css'
+// james
 const API_URIS = {
-    MOVES: 'moves',
-    STATUS: 'status',
-    MOVE: 'move',
-    AI_MOVE: 'aimove'
+    "MOVES": 'moves',
+    "STATUS": 'status',
+    "MOVE": 'move',
+    "AI_MOVE": 'aimove'
 }
+
 const moveSound = new Audio(`data:audio/wav;base64,${MOVE_SOUND}`)
 
 function Chess() {

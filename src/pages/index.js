@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 import styled from 'styled-components'
 import Chess from './../components/Chess'
 import SlideshowComp from './../components/Slider'
@@ -49,13 +50,7 @@ export default class Index extends React.Component {
   render () {
     return (
       <Page>
-        <SlideshowComp />
-        <DraggableContainer>
-          <DraggableComp src={chains} zIndex='3' />
-          <DraggableComp src={chess} zIndex='1' />
-          <DraggableComp src={ying} zIndex='2' />
-          <DraggableComp src={yang} zIndex='2' />
-        </DraggableContainer>
+
         <Chess />
       </Page>
     )
