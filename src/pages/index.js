@@ -28,6 +28,7 @@ const Page = styled.div`
 `
 
 const DraggableContainer = styled.div`
+display: none;
   width: 100%;
   height: 100%;
   position: relative;
@@ -44,6 +45,7 @@ const DraggableContainer = styled.div`
   .heart {
     z-index: 1;
   }
+  //<SlideshowComp />
 `
 
 export default class Index extends React.Component {
@@ -51,6 +53,12 @@ export default class Index extends React.Component {
     return (
       <Page>
 
+        <DraggableContainer>
+          <DraggableComp src={chains} zIndex='3' />
+          <DraggableComp src={chess} zIndex='1' />
+          <DraggableComp src={ying} zIndex='2' />
+          <DraggableComp src={yang} zIndex='2' />
+        </DraggableContainer>
         <Chess />
       </Page>
     )

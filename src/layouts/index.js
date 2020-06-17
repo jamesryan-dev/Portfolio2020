@@ -42,8 +42,9 @@ const WrapLayout = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
-  @media (max-width: 693px) {
+  @media (max-width: 894px) {
     flex-direction: column;
+    height: 100%;
   }
 
   @media (min-width: ) {
@@ -255,6 +256,12 @@ const NavMenu = styled(UL)`
   .blink {
     &:hover {
         animation: blinker 1s linear infinite;
+    }
+  }
+
+  @media only screen and (max-width: 898px) {
+    li:last-of-type {
+      display: none;
     }
   }
 
