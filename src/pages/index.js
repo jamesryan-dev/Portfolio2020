@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {P} from './../components/HTML/P'
 import SlideshowComp from './../components/Slider'
 import DraggableComp from './../components/Draggable'
 import chains from './../gif/chains.gif'
@@ -45,6 +45,22 @@ const DraggableContainer = styled.div`
   }
 `
 
+const PContainer = styled.div`
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  @media (max-width: 898px ) {
+    display: block;
+    text-align: center;
+    p {
+      color: #d7d7d7;
+      font-size: 12px;
+    }
+  }
+`
+
 export default class Index extends React.Component {
   render () {
     return (
@@ -56,6 +72,9 @@ export default class Index extends React.Component {
           <DraggableComp src={ying} zIndex='2' />
           <DraggableComp src={yang} zIndex='2' />
         </DraggableContainer>
+        <PContainer>
+          <P>Best enjoyed on Desktop but glad you're here</P>
+        </PContainer>
       </Page>
     )
   }
