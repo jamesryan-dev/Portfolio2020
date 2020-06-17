@@ -47,7 +47,7 @@ const AboutContainer = styled.div`
 
   @media only screen and (max-width: 898px) {
     width: 100%;
-    margin-top: 100px;
+    padding-top: 30px;
 
     h1 {
       font-size: 26px;
@@ -59,8 +59,8 @@ const AboutContainer = styled.div`
 
     i {
       font-size: 17px !important;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 1px;
+      padding-right: 2px;
     }
   }
 `
@@ -152,6 +152,7 @@ width: 50% !important;
 @media only screen and (max-width: 898px) {
   width: 50% !important;
   margin-top: 10px;
+  display: none;
 }
 `
 

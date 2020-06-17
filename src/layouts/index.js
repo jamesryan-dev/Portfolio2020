@@ -185,6 +185,7 @@ const NavComp = styled.section`
       padding: 0.75em;
       padding-top: 1em;
       height: auto;
+      position: relative;
      transform: none;
      left: 0;
      text-align: center;
