@@ -2,9 +2,9 @@
 font-family: 'Mughal';
 font-style: normal;
 src: local('Mughal'),
-      url('./mughal/Mughal.otf'),
-      url('./mughal/mughal-webfont.woff'),
-      url('./mughal/mughal-webfont.woff2');
+      url('./fonts/mughal/Mughal.otf'),
+      url('./fonts/mughal/mughal-webfont.woff'),
+      url('./fonts/mughal/mughal-webfont.woff2');
 }
 
 /* @font-face {

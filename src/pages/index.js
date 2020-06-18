@@ -73,7 +73,7 @@ export default class Index extends React.Component {
           <DraggableComp src={yang} zIndex='2' />
         </DraggableContainer>
         <PContainer>
-          <P>Best enjoyed on Desktop but glad you're here</P>
+          <P>Best enjoyed on Desktop<br /> but glad you're here</P>
         </PContainer>
       </Page>
     )
