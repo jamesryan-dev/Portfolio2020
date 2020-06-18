@@ -164,8 +164,8 @@ export default class Index extends React.Component {
           <ContactUl>
              <ContactLi><a href='mailto:freebobcole@gmail.com'><H1link><span className='hide-on-mobile'>Email - </span>freebobcole@gmail.com</H1link></a><img src={email} /></ContactLi>
              <ContactLi><a href='https://www.instagram.com/names.fm/' target='_blank' rel='noopener'><H1link>Instagram - @names.fm</H1link></a><img src={ig} /></ContactLi>
-            <ContactLi><a href='https://twitter.com/namescodes' target='_blank' rel='noopener'><H1link>Twitter - @names_fm</H1link></a><img src={twitter} /></ContactLi>
-            <ContactLi><a href='https://soundcloud.com/namesnames' target='_blank' rel='noopener'><H1link>Soundcloud - /names-fm</H1link></a><img className='soundcloud' src={music} /></ContactLi>
+            <ContactLi><a href='https://twitter.com/names_fm' target='_blank' rel='noopener'><H1link>Twitter - @names_fm</H1link></a><img src={twitter} /></ContactLi>
+            <ContactLi><a href='https://soundcloud.com/names-fm/' target='_blank' rel='noopener'><H1link>Soundcloud - /names-fm</H1link></a><img className='soundcloud' src={music} /></ContactLi>
 
           </ContactUl>
         </ContactContainer>
