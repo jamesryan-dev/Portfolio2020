@@ -46,6 +46,8 @@ const John = styled.img`
 `
 
 const FourOhFour2 = styled.div`
+display: flex;
+
   @media only screen and (max-width: 898px) {
     right: 0;
     width: 100%;
@@ -53,6 +55,8 @@ const FourOhFour2 = styled.div`
       font-size: 136.666px;
       margin-top: 10px;
       margin-bottom: 10px;
+      -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
     }
   }
 `

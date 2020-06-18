@@ -422,7 +422,7 @@ export default class Template extends React.Component {
     			<Helmet
     	      title='Names'
     	      meta={[
-    	        { name: 'description', content: 'names: front-end developer & designer - creating online and offline' },
+    	        { name: 'description', content: 'Front-end developer & designer - creating online and offline' },
     	        { name: 'keywords', content: 'names, names-fm, names fm, jimmy names, names codes, soundcloud, web development, web developer, front-end, design, web design' },
         {
           property: `og:title`,
@@ -430,7 +430,7 @@ export default class Template extends React.Component {
         },
         {
           property: `og:description`,
-          content: 'names: front-end developer & designer - creating online and offline',
+          content: 'Front-end developer & designer - creating online and offline',
         },
         {
           property: `og:type`,
@@ -438,7 +438,7 @@ export default class Template extends React.Component {
         },
         {
           name: `twitter:card`,
-          content: `https://names.codes/summary_large_image.png`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -449,7 +449,7 @@ export default class Template extends React.Component {
           content: 'Names',
         },
         {
-          name: `twitter:description`,content: 'names: front-end developer & designer - creating online and offline', }
+          name: `twitter:description`,content: 'Front-end developer & designer - creating online and offline', }
     	      ]}
     	    />
         	{/* <Nav /> */}
