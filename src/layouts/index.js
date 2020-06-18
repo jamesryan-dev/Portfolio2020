@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-// import Nav from './../components/Nav'
 import DownloadComp from './../components/Download'
 import SmallFolderComp from './../components/SmallFolder'
 
@@ -95,20 +94,6 @@ const PageRender = styled.div`
 `
 
 injectGlobal`
-
-@font-face {
-font-family: 'Mughal';
-font-style: normal;
-src: local('Mughal'),
-      url('../static/fonts/Mughal.otf')
-}
-
-@font-face {
-font-family: 'Arch';
-font-style: normal;
-src: local('Russell-Square-Regular'),
-      url('../static/fonts/Russell Square Regular.ttf')
-}
   html {
     background: black;
   }

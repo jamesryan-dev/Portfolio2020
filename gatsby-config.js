@@ -35,6 +35,15 @@ module.exports = {
           windows: true
         }
       }
-    }
+    },
+    {
+          resolve: "gatsby-plugin-web-font-loader",
+          options: {
+            custom: {
+              families: ["Mughal"],
+              urls: ["/fonts/fonts.css"],
+            },
+          },
+        },
   ]
 }

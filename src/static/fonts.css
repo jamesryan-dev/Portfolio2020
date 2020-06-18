@@ -1,0 +1,15 @@
+@font-face {
+font-family: 'Mughal';
+font-style: normal;
+src: local('Mughal'),
+      url('./mughal/Mughal.otf'),
+      url('./mughal/mughal-webfont.woff'),
+      url('./mughal/mughal-webfont.woff2');
+}
+
+/* @font-face {
+font-family: 'Arch';
+font-style: normal;
+src: local('Russell-Square-Regular'),
+      url('../static/fonts/Russell Square Regular.ttf')
+} */
