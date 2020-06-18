@@ -420,10 +420,36 @@ export default class Template extends React.Component {
       <ThemeProvider className='Theme' theme={this.state.theme}>
         <WrapLayout className='Nav-PageRender-Flex-Container Also-Wrap'>
     			<Helmet
-    	      title='jimmyNames'
+    	      title='Names'
     	      meta={[
-    	        { name: 'description', content: 'Jimmy Names' },
-    	        { name: 'keywords', content: 'jimmy names, jimmyNames' },
+    	        { name: 'description', content: 'names: front-end developer & designer - creating online and offline' },
+    	        { name: 'keywords', content: 'names, names-fm, names fm, jimmy names, names codes, soundcloud, web development, web developer, front-end, design, web design' },
+        {
+          property: `og:title`,
+          content: 'Names',
+        },
+        {
+          property: `og:description`,
+          content: 'names: front-end developer & designer - creating online and offline',
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `twitter:card`,
+          content: `https://names.codes/summary_large_image.png`,
+        },
+        {
+          name: `twitter:creator`,
+          content: '@names_fm',
+        },
+        {
+          name: `twitter:title`,
+          content: 'Names',
+        },
+        {
+          name: `twitter:description`,content: 'names: front-end developer & designer - creating online and offline', }
     	      ]}
     	    />
         	{/* <Nav /> */}
