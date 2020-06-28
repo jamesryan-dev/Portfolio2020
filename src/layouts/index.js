@@ -4,10 +4,10 @@ import Helmet from 'react-helmet'
 import DownloadComp from './../components/Download'
 import SmallFolderComp from './../components/SmallFolder'
 
-import logo from './../gif/jn.gif'
+// import logo from './../gif/jn.gif'
 import logo2 from './../images/logo.svg'
 import Link from 'gatsby-link'
-import ay1 from './../images/projects/auralyouth/ay1.png'
+import ay1 from './../images/names.png'
 import {UL} from './../components/HTML/UL'
 import {LI} from './../components/HTML/LI'
 

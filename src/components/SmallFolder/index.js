@@ -16,7 +16,7 @@ const SmallFolderHolder = styled.div`
    transition: all 0.3s ease-in-out;
    // &:hover {
    //   img {
-   //       top: 2px;
+   //       top: 1px;
    //       &:nth-child(2) {
    //         // border: 1px solid blue;
    //       }
@@ -59,6 +59,7 @@ const SmallProjectImage = styled.img`
   left: 50%;
   left: -1px;
   top: 10px;
+  top: 3px;
   //margin-left: -67px;
   z-index: 5;
   //top: 15px;
