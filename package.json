@@ -19,7 +19,7 @@
     "react-draggable": "^3.0.5",
     "react-transition-group": "^2.2.1",
     "react-typography": "^0.15.10",
-    "three": "^0.117.1",
+    "three": "^0.125.0",
     "typography": "^0.15.12",
     "typography-breakpoint-constants": "^0.14.0",
     "typography-plugin-code": "^0.15.11"
